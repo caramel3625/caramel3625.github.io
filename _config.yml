@@ -1,18 +1,1 @@
-plugins:
-  - jekyll-remote-theme
 
-remote_theme: victorvoid/space-jekyll-template
-
-baseurl: "/" # the subpath
-url: "https://caramel3625.github.io/" # the base hostname &/|| protocol for your site
-
-links:
-  section_1:
-    - title: projects
-      url: /
-      key_trigger: 1
-  section_2:
-    - title: github
-      url: http://www.github.com/caramel3625
-      new_tab: true
-      key_trigger: g
