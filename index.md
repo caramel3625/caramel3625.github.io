@@ -11,7 +11,7 @@ rosé pine install links
 
 <sup>rosé pine: [https://raw.githubusercontent.com/caramel3625/rose-pine-for-discord-mobile/refs/heads/main/dist/rose-pine.json](https://raw.githubusercontent.com/caramel3625/rose-pine-for-discord-mobile/refs/heads/main/dist/rose-pine.json)  
 rosé pine moon: [https://raw.githubusercontent.com/caramel3625/rose-pine-for-discord-mobile/refs/heads/main/dist/rose-pine-moon.json](https://raw.githubusercontent.com/caramel3625/rose-pine-for-discord-mobile/refs/heads/main/dist/rose-pine-moon.json)  
-rosé pine dawn: [https://raw.githubusercontent.com/caramel3625/rose-pine-for-discord-mobile/refs/heads/main/dist/rose-pine-dawn.json](https://raw.githubusercontent.com/caramel3625/rose-pine-for-discord-mobile/refs/heads/main/dist/rose-pine.json-dawn) </sup>
+rosé pine dawn: [https://raw.githubusercontent.com/caramel3625/rose-pine-for-discord-mobile/refs/heads/main/dist/rose-pine-dawn.json](https://raw.githubusercontent.com/caramel3625/rose-pine-for-discord-mobile/refs/heads/main/dist/rose-pine.json-dawn)  </sup>  
 
 # [more purple for revenge/shiggycord/kettu](https://github.com/caramel3625/more-purple-theme): 
 **a simple purple dark theme for revenge/shiggycord/kettu.**
