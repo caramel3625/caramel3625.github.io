@@ -38,25 +38,33 @@
 
 body { margin: 0; background: #141118; color: #e8e5eb; }
 .tool-md-preview, .export-container {
-  background: #1c1822; color: #e8e5eb;
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: 16px; line-height: 1.72;
-  --html-code-text: #e8e5eb; --html-code-keyword: #f472b6;
-  --html-code-title: #60a5fa; --html-code-string: #a3e635;
-  --html-code-number: #fbbf24; --html-code-comment: #7c8597;
+  background: #1c1822; 
+  color: #e8e5eb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  --html-code-text: #e8e5eb;
+  --html-code-keyword: #cf222e;
+  --html-code-title: #8250df;
+  --html-code-string: #0a3069;
+  --html-code-number: #0550ae;
+  --html-code-comment: #6e7781;
 }
-h1, h2, h3, h4 { color: #f9fafb; letter-spacing: -0.025em; }
-h1 { padding-bottom: 0.45em; border-bottom: 1px solid #3b3446; font-size: clamp(2rem, 5vw, 3.2rem); }
-h2 { margin-top: 2em; color: #bc93fd; }
-h3 { color: #c4b5fd; }
-a { color: #a37dfc; text-underline-offset: 0.2em; }
-blockquote { border-left: 4px solid #8c60fa; background: #25202d; color: #d4cbe1; }
-code { border: 1px solid #3b3446; border-radius: 5px; background: #141118; color: #f9a8d4; padding: 0.14em 0.36em; }
-pre { border: 1px solid #3b3446; border-radius: 10px; background: #0e0b12; box-shadow: 0 14px 32px rgba(0,0,0,.28); }
-table { display: table; width: 100%; border-collapse: collapse; }
-th { background: #2c2535; color: #d7bffe; }
-th, td { border: 1px solid #3b3446; padding: 0.72em; }
-hr { border: 0; border-top: 1px solid #3b3446; }
+h1, h2, h3, h4 { color: #faf9fb; font-weight: 650; line-height: 1.25; }
+h1 { margin-bottom: 0.7em; padding-bottom: 0.32em; border-bottom: 1px solid #d8dee4; font-size: 2em; }
+h2 { margin-top: 1.75em; padding-bottom: 0.3em; border-bottom: 1px solid #bc93fd; font-size: 1.5em; }
+h3 { color: #c4b5fd; margin-top: 1.5em; font-size: 1.25em; }
+a { color: #a37dfc; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+blockquote { margin: 1em 0; padding: 0 1em; border-left: 0.25em solid #8c60fa; color: #d4cbe1; }
+code { border-radius: 6px; background: #141118; color: #d4a8f9; padding: 0.18em 0.38em; font-size: 0.88em; }
+pre { border: 1px solid #3b3446; border-radius: 8px; background: #0e0b12; box-shadow: none; }
+pre code { background: transparent; padding: 0; }
+table { display: table; width: 100%; border-spacing: 0; border-collapse: collapse; }
+th { background: #2c2535; font-weight: 650; }
+th, td { border: 1px solid #3b3446; padding: 0.55em 0.8em; }
+tr:nth-child(2n) { background: #2c2535; }
+hr { height: 1px; border: 0; background: #3b3446; }
+img { border-radius: 6px; }
 
 .tool-md-preview pre .hljs-keyword, .export-container pre .hljs-keyword,
 .tool-md-preview pre .hljs-selector-tag, .export-container pre .hljs-selector-tag,
@@ -76,7 +84,7 @@ hr { border: 0; border-top: 1px solid #3b3446; }
 .tool-md-preview pre .hljs-punctuation, .export-container pre .hljs-punctuation { color: var(--html-code-text) !important; }
 </style>
 <div class="export-container">
-<h2><a href="https://caramel3625.github.io/discord-plugins">discord plugins</a></h2>
+<h3><a href="https://caramel3625.github.io/discord-plugins">discord plugins</a></h3>
 <p>plugins and themes made for revenge, shiggycord, kettu, and valenced.</p>
 <hr>
 
