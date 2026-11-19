@@ -3,5 +3,5 @@ plugins:
 
 remote_theme: victorvoid/space-jekyll-template
 
-baseurl: "" # the subpath
+baseurl: "https://caramel3625.github.io/" # the subpath
 url: "https://caramel3625.github.io/" # the base hostname &/|| protocol for your site
