@@ -2,265 +2,344 @@
 <html>
 
 <head>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-    .tool-md-preview,
-    .export-container {
-      width: min(100%, 900px);
-      max-width: 900px;
-      min-height: 100%;
-      margin-inline: auto;
-      padding: clamp(32px, 5vw, 68px) clamp(22px, 5vw, 58px);
-      box-sizing: border-box;
-      overflow-wrap: anywhere;
-    }
+        .tool-md-preview,
+        .export-container {
+            width: min(100%, 900px);
+            max-width: 900px;
+            min-height: 100%;
+            margin-inline: auto;
+            padding: clamp(32px, 5vw, 68px) clamp(22px, 5vw, 58px);
+            box-sizing: border-box;
+            overflow-wrap: anywhere;
+        }
 
-    .tool-md-preview img,
-    .export-container img,
-    .tool-md-preview video,
-    .export-container video,
-    .tool-md-preview svg,
-    .export-container svg {
-      max-width: 100%;
-      height: auto;
-    }
+        .tool-md-preview img,
+        .export-container img,
+        .tool-md-preview video,
+        .export-container video,
+        .tool-md-preview svg,
+        .export-container svg {
+            max-width: 100%;
+            height: auto;
+        }
 
-    .tool-md-preview pre,
-    .export-container pre {
-      max-width: 100%;
-      margin: 1.4em 0;
-      padding: 1.05em 1.2em;
-      overflow-x: auto;
-      box-sizing: border-box;
-      color: var(--html-code-text) !important;
-      font-size: 0.9em;
-      line-height: 1.62;
-      tab-size: 2;
-    }
+        .tool-md-preview pre,
+        .export-container pre {
+            max-width: 100%;
+            margin: 1.4em 0;
+            padding: 1.05em 1.2em;
+            overflow-x: auto;
+            box-sizing: border-box;
+            color: var(--html-code-text) !important;
+            font-size: 0.9em;
+            line-height: 1.62;
+            tab-size: 2;
+        }
 
-    .tool-md-preview pre code,
-    .export-container pre code {
-      display: block;
-      min-width: max-content;
-      border: 0;
-      background: transparent !important;
-      color: var(--html-code-text) !important;
-      font-family: IBM Plex Mono, monospace;
-    }
+        .tool-md-preview pre code,
+        .export-container pre code {
+            display: block;
+            min-width: max-content;
+            border: 0;
+            background: transparent !important;
+            color: var(--html-code-text) !important;
+            font-family: IBM Plex Mono, monospace;
+        }
 
-    .tool-md-preview table,
-    .export-container table {
-      max-width: 100%;
-      overflow-x: auto;
-    }
+        .tool-md-preview table,
+        .export-container table {
+            max-width: 100%;
+            overflow-x: auto;
+        }
 
-    @media (max-width: 640px) {
+        @media (max-width: 640px) {
 
-      .tool-md-preview,
-      .export-container {
-        padding: 28px 20px;
-      }
+            .tool-md-preview,
+            .export-container {
+                padding: 28px 20px;
+            }
 
-      .tool-md-preview pre,
-      .export-container pre {
-        margin-inline: -4px;
-        padding: 0.9em 1em;
-      }
-    }
+            .tool-md-preview pre,
+            .export-container pre {
+                margin-inline: -4px;
+                padding: 0.9em 1em;
+            }
+        }
 
-    body {
-      margin: 0;
-      background: #141118;
-      color: #e8e5eb;
-    }
+        body {
+            margin: 0;
+            background: #141118;
+            color: #e8e5eb;
+        }
 
-    .tool-md-preview,
-    .export-container {
-      background: #1c1822;
-      color: #e8e5eb;
-      font-family: IBM Plex Mono, monospace;
-      font-size: 16px;
-      line-height: 1.65;
-      --html-code-text: #e8e5eb;
-      --html-code-keyword: #cf222e;
-      --html-code-title: #8250df;
-      --html-code-string: #0a3069;
-      --html-code-number: #0550ae;
-      --html-code-comment: #6e7781;
-    }
+        .tool-md-preview,
+        .export-container {
+            background: #1c1822;
+            color: #e8e5eb;
+            font-family: IBM Plex Mono, monospace;
+            font-size: 16px;
+            line-height: 1.65;
+            --html-code-text: #e8e5eb;
+            --html-code-keyword: #cf222e;
+            --html-code-title: #8250df;
+            --html-code-string: #0a3069;
+            --html-code-number: #0550ae;
+            --html-code-comment: #6e7781;
+        }
 
-    h1,
-    h2,
-    h3,
-    h4 {
-      color: #faf9fb;
-      font-weight: 650;
-      line-height: 1.25;
-    }
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #faf9fb;
+            font-weight: 650;
+            line-height: 1.25;
+        }
 
-    h1 {
-      margin-bottom: 0.5em;
-      padding-bottom: 0.32em;
-      border-bottom: 1px solid #d8dee4;
-      font-size: 2em;
-    }
+        h1 {
+            margin-bottom: 0.5em;
+            padding-bottom: 0.32em;
+            border-bottom: 1px solid #d8dee4;
+            font-size: 2em;
+        }
 
-    h2 {
-      color: #bc93fd;
-      margin-top: 1.2em;
-      padding-bottom: 0.3em;
-      font-size: 1.5em;
-    }
+        h2 {
+            color: #bc93fd;
+            margin-top: 1.2em;
+            padding-bottom: 0.3em;
+            font-size: 1.5em;
+        }
 
-    h3 {
-      color: #c4b5fd;
-      margin-top: 1.5em;
-      font-size: 1.25em;
-    }
+        h3 {
+            color: #c4b5fd;
+            margin-top: 1em;
+            font-size: 1.25em;
+        }
 
-    a {
-      color: #a37dfc;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 0.2em;
-    }
+        a {
+            color: #a37dfc;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.2em;
+        }
 
-    blockquote {
-      margin: 1em 0;
-      padding: 0 1em;
-      border-left: 0.25em solid #8c60fa;
-      color: #d4cbe1;
-    }
+        blockquote {
+            margin: 1em 0;
+            padding: 0 1em;
+            border-left: 0.25em solid #8c60fa;
+            color: #d4cbe1;
+        }
 
-    code {
-      border-radius: 6px;
-      background: #141118;
-      color: #d4a8f9;
-      padding: 0.18em 0.38em;
-      font-size: 0.88em;
-    }
+        code {
+            border-radius: 6px;
+            background: #141118;
+            color: #d4a8f9;
+            padding: 0.18em 0.38em;
+            font-size: 0.88em;
+        }
 
-    pre {
-      border: 1px solid #3b3446;
-      border-radius: 8px;
-      background: #0e0b12;
-      box-shadow: none;
-    }
+        pre {
+            border: 1px solid #3b3446;
+            border-radius: 8px;
+            background: #0e0b12;
+            box-shadow: none;
+        }
 
-    pre code {
-      background: transparent;
-      padding: 0;
-    }
+        pre code {
+            background: transparent;
+            padding: 0;
+        }
 
-    table {
-      display: table;
-      width: 100%;
-      border-spacing: 0;
-      border-collapse: collapse;
-    }
+        table {
+            display: table;
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
 
-    th {
-      background: #2c2535;
-      font-weight: 650;
-    }
+        th {
+            background: #2c2535;
+            font-weight: 650;
+        }
 
-    th,
-    td {
-      border: 1px solid #3b3446;
-      padding: 0.55em 0.8em;
-    }
+        th,
+        td {
+            border: 1px solid #3b3446;
+            padding: 0.55em 0.8em;
+        }
 
-    tr:nth-child(2n) {
-      background: #2c2535;
-    }
+        tr:nth-child(2n) {
+            background: #2c2535;
+        }
 
-    hr {
-      height: 1px;
-      border: 0;
-      background: #3b3446;
-    }
+        hr {
+            height: 1px;
+            border: 0;
+            background: #3b3446;
+        }
 
-    img {
-      border-radius: 6px;
-    }
+        img {
+            border-radius: 6px;
+        }
 
-    .tool-md-preview pre .hljs-keyword,
-    .export-container pre .hljs-keyword,
-    .tool-md-preview pre .hljs-selector-tag,
-    .export-container pre .hljs-selector-tag,
-    .tool-md-preview pre .hljs-literal,
-    .export-container pre .hljs-literal {
-      color: var(--html-code-keyword) !important;
-    }
+        .tool-md-preview pre .hljs-keyword,
+        .export-container pre .hljs-keyword,
+        .tool-md-preview pre .hljs-selector-tag,
+        .export-container pre .hljs-selector-tag,
+        .tool-md-preview pre .hljs-literal,
+        .export-container pre .hljs-literal {
+            color: var(--html-code-keyword) !important;
+        }
 
-    .tool-md-preview pre .hljs-title,
-    .export-container pre .hljs-title,
-    .tool-md-preview pre .hljs-title.function_,
-    .export-container pre .hljs-title.function_,
-    .tool-md-preview pre .hljs-built_in,
-    .export-container pre .hljs-built_in {
-      color: var(--html-code-title) !important;
-    }
+        .tool-md-preview pre .hljs-title,
+        .export-container pre .hljs-title,
+        .tool-md-preview pre .hljs-title.function_,
+        .export-container pre .hljs-title.function_,
+        .tool-md-preview pre .hljs-built_in,
+        .export-container pre .hljs-built_in {
+            color: var(--html-code-title) !important;
+        }
 
-    .tool-md-preview pre .hljs-string,
-    .export-container pre .hljs-string,
-    .tool-md-preview pre .hljs-attr,
-    .export-container pre .hljs-attr,
-    .tool-md-preview pre .hljs-name,
-    .export-container pre .hljs-name {
-      color: var(--html-code-string) !important;
-    }
+        .tool-md-preview pre .hljs-string,
+        .export-container pre .hljs-string,
+        .tool-md-preview pre .hljs-attr,
+        .export-container pre .hljs-attr,
+        .tool-md-preview pre .hljs-name,
+        .export-container pre .hljs-name {
+            color: var(--html-code-string) !important;
+        }
 
-    .tool-md-preview pre .hljs-number,
-    .export-container pre .hljs-number,
-    .tool-md-preview pre .hljs-symbol,
-    .export-container pre .hljs-symbol,
-    .tool-md-preview pre .hljs-variable,
-    .export-container pre .hljs-variable {
-      color: var(--html-code-number) !important;
-    }
+        .tool-md-preview pre .hljs-number,
+        .export-container pre .hljs-number,
+        .tool-md-preview pre .hljs-symbol,
+        .export-container pre .hljs-symbol,
+        .tool-md-preview pre .hljs-variable,
+        .export-container pre .hljs-variable {
+            color: var(--html-code-number) !important;
+        }
 
-    .tool-md-preview pre .hljs-comment,
-    .export-container pre .hljs-comment,
-    .tool-md-preview pre .hljs-quote,
-    .export-container pre .hljs-quote {
-      color: var(--html-code-comment) !important;
-      font-style: italic;
-    }
+        .tool-md-preview pre .hljs-comment,
+        .export-container pre .hljs-comment,
+        .tool-md-preview pre .hljs-quote,
+        .export-container pre .hljs-quote {
+            color: var(--html-code-comment) !important;
+            font-style: italic;
+        }
 
-    .tool-md-preview pre .hljs-params,
-    .export-container pre .hljs-params,
-    .tool-md-preview pre .hljs-punctuation,
-    .export-container pre .hljs-punctuation {
-      color: var(--html-code-text) !important;
-    }
-  </style>
-  <title>TMDB API placeholder page</title>
-
+        .tool-md-preview pre .hljs-params,
+        .export-container pre .hljs-params,
+        .tool-md-preview pre .hljs-punctuation,
+        .export-container pre .hljs-punctuation {
+            color: var(--html-code-text) !important;
+        }
+    </style>
+    <title>discord plugins</title>
 </head>
-
 <body>
-    <div>
+<div>
     <p style="width:100%; font-family: IBM Plex Mono, monospace; font-size: 14px; font-weight: 500; text-align: center">
-        <a href="https://caramel3625.github.io/">directory</a>
-    </p>
-    </div>
-  <div class="export-container">
-    <h4>tinymediamanager TMDB api</h4>
-    <p>placeholder i guess, just need a webbed site for it and i really just need the api key i think? we'll see i
-      guess,
-      if i ended up deleting this i'm either not using it or need something specific on the website,<br>
-      The purpose I have for this API instance is downloading trailers for certain movies and tv. 
-    </p>
-  </div>
+    <a href="https://caramel3625.github.io/">directory</a></p>
+</div>
 
-  <div>
-    <p style="position: static; bottom: 0; width:100%; font-family: IBM Plex Mono, monospace; font-size: 22px; font-weight: 600; text-align: center">
+<div class="export-container">
+    <p style="width:100%; top: 0; font-family: IBM Plex Mono, monospace; text-align: center"> 
+        view all of my repositories <a href="https://github.com/caramel3625?tab=repositories"><strong>on github.</strong></a></p>
+    <hr>
+    <h1 id="user-content-valenced-plugins"><a href="https://github.com/caramel3625/valenced-plugins">valenced
+            plugins</a></h1>
+    <h2 id="user-content-valenced-plugins-description">includes all of my valenced plugins:</h2>
+    <p>"<strong>more fonts</strong>" (3 font packs: <code>"Figtree"</code>, <code>"IBM Plex Mono"</code>, and
+        <code>"OpenDyslexic"</code>); "<strong>Rosé Pine</strong>" (3 themes: <code>"Rosé Pine"</code>,
+        <code>"Rosé Pine Moon"</code>, and <code>"Rosé Pine Dawn"</code>, and 1 icon pack: <code>"Rosé Pine"</code>); as
+        well as "<strong>more palettes</strong>" (2 themes: <code>"more purple"</code> and
+        <code>"more blue"</code>).<br>
+        <strong>how to install:</strong>
+    </p>
+    <ol>
+        <li>copy the <a href="https://caramel3625.github.io/valenced-plugins/">link</a> listed below</li>
+        <li>open valenced and navigate to
+            <code>Settings &gt; Plugins &gt; Advanced (the cog icon in the top right corner)</code></li>
+        <li>paste the link you copied into the <code>Repository URL</code> field, and tap <code>Add Repository</code>
+        </li>
+        <li>navigate to
+            <code>Settings &gt; Themes &gt; Manage theme plugins &gt; Browse Themes (the plus icon in the bottom right)</code>
+        </li>
+        <li>tap <code>install</code> next to any desired plugins</li>
+        <li>enable installed plugins at: <code>Settings &gt; Themes &gt; Manage theme plugins</code></li>
+        <li>select themes, font packs, and icon packs from enabled plugins at: <code>Settings &gt; Themes</code>
+            <code>&gt;</code> <code>Colors</code> / <code>Fonts</code> / <code>Icons</code></li>
+    </ol>
+    <p><sup>install link: <a
+                href="https://caramel3625.github.io/valenced-plugins/">https://caramel3625.github.io/valenced-plugins/</a>
+        </sup></p>
+    <hr>
+    <h1 id="user-content-rosé-pine"><a href="https://github.com/caramel3625/rose-pine-for-discord-mobile">Rosé Pine for
+            Revenge/ShiggyCord/Kettu</a>:</h1>
+    <h2 id="user-content-rosé-pine-description">All natural pine, faux fur and a bit of soho vibes for the classy
+        minimalist. Includes all three Rosé Pine variations: <code>Rosé Pine</code>, <code>Rosé Pine Moon</code>, and
+        <code>Rosé Pine Dawn</code>.</h2>
+    <p><strong>How to install:</strong></p>
+    <ol>
+        <li>Copy the link corresponding to the theme variant you're trying to install</li>
+        <li>Open Revenge, ShiggyCord, or Kettu</li>
+        <li>Navigate to <code>Settings &gt; Themes &gt; Add Theme (the plus icon in the bottom right corner)</code></li>
+        <li>Paste the link you copied, and tap <code>Install</code></li>
+        <li>Select the theme variant you installed from the list of themes</li>
+    </ol>
+    <p><sup>Rosé Pine: <a
+                href="https://raw.githubusercontent.com/caramel3625/rose-pine-for-discord-mobile/refs/heads/main/dist/rose-pine.json">https://raw.githubusercontent.com/caramel3625/rose-pine-for-discord-mobile/refs/heads/main/dist/rose-pine.json</a><br>
+            Rosé Pine Moon: <a
+                href="https://raw.githubusercontent.com/caramel3625/rose-pine-for-discord-mobile/refs/heads/main/dist/rose-pine-moon.json">https://raw.githubusercontent.com/caramel3625/rose-pine-for-discord-mobile/refs/heads/main/dist/rose-pine-moon.json</a><br>
+            Rosé Pine Dawn: <a
+                href="https://raw.githubusercontent.com/caramel3625/rose-pine-for-discord-mobile/refs/heads/main/dist/rose-pine.json-dawn">https://raw.githubusercontent.com/caramel3625/rose-pine-for-discord-mobile/refs/heads/main/dist/rose-pine-dawn.json</a>
+        </sup></p>
+    <hr>
+    <h1 id="user-content-more-purple"><a href="https://github.com/caramel3625/more-purple-theme">more purple for
+            revenge/shiggycord/kettu</a>:</h1>
+    <h2 id="user-content-more-purple-description">a simple purple dark theme. made for revenge/shiggycord/kettu</h2>
+    <p><strong>how to install:</strong></p>
+    <ol>
+        <li>copy the <a
+                href="https://raw.githubusercontent.com/caramel3625/more-purple-theme/refs/heads/main/more-purple.json">link</a>
+            listed below</li>
+        <li>open revenge, shiggycord, or kettu</li>
+        <li>navigate to <code>Settings &gt; Themes &gt; Add Theme (the plus icon in the bottom right corner)</code></li>
+        <li>paste the link you copied, and tap <code>Install</code></li>
+        <li>select "more purple" from the list of themes</li>
+    </ol>
+    <p><sup>install link: <a
+                href="https://raw.githubusercontent.com/caramel3625/more-purple-theme/refs/heads/main/more-purple.json">https://raw.githubusercontent.com/caramel3625/more-purple-theme/refs/heads/main/more-purple.json</a>
+        </sup></p>
+    <hr>
+    <h1 id="user-content-midnight-blue"><a href="https://github.com/caramel3625/midnight-blue-theme">midnight blue for
+            revenge/shiggycord/kettu</a>:</h1>
+    <h2 id="user-content-midnight-blue-description">a simple blue dark theme. made for revenge/shiggycord/kettu</h2>
+    <p><strong>how to install:</strong></p>
+    <ol>
+        <li>copy the <a
+                href="https://raw.githubusercontent.com/caramel3625/midnight-blue-theme/refs/heads/main/midnight-blue.json">link</a>
+            listed below</li>
+        <li>open revenge, shiggycord, or kettu</li>
+        <li>navigate to <code>Settings &gt; Themes &gt; Add Theme (the plus icon in the bottom right corner)</code></li>
+        <li>paste the link you copied, and tap <code>Install</code></li>
+        <li>select "midnight blue" from the list of themes</li>
+    </ol>
+    <p><sup>install link: <a
+                href="https://raw.githubusercontent.com/caramel3625/midnight-blue-theme/refs/heads/main/midnight-blue.json">https://raw.githubusercontent.com/caramel3625/midnight-blue-theme/refs/heads/main/midnight-blue.json</a><br>
+            version with purple icons: <a
+                href="https://raw.githubusercontent.com/caramel3625/midnight-blue-theme/refs/heads/main/midnight-blue-purple-icons.json">https://raw.githubusercontent.com/caramel3625/midnight-blue-theme/refs/heads/main/midnight-blue-purple-icons.json</a>
+        </sup></p>
+
+</div>
+
+<div>
+    <p style="bottom: 0; width:100%; font-family: IBM Plex Mono, monospace; font-size: 22px; font-weight: 600; text-align: center">
         <a href="https://caramel3625.github.io/">directory</a>
     </p>
-  </div>
+</div>
 
 </body>
-
 
 </html>
